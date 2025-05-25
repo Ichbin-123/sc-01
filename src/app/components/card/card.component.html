@@ -1,0 +1,19 @@
+<div class="card h-100 position-relative">
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-primary">{{prodotto.id}}<span class="visually-hidden">ID</span></span>
+    <img [src]="prodotto.image" class="card-img-top" [alt]="prodotto.title" width="200px">
+    <div class="card-body">
+        <h5 class="card-title">{{prodotto.title}}</h5>
+        <p class="card-text">{{prodotto.description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Category: {{prodotto.category}}</li>
+        <li class="list-group-item">Price: {{prodotto.price | currency: "EUR"}}</li>
+        <ul class="list-group list-group-flush d-flex flex-row"> 
+            <li class="list-group-item">Rate: {{prodotto.rating.rate}}</li>
+            <li class="list-group-item">Count: {{prodotto.rating.count}}</li>
+        </ul>
+    </ul>
+    <div class="card-body">
+        <a [href]="prodotto.image" class="d-block card-link text-center" target="_blank" >Galleria</a>
+    </div>
+</div>
